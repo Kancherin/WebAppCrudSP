@@ -64,19 +64,18 @@
         $.get("Students/GetStudents?name=" + name, function (students) {
             _students = students;
             $.map(students, function (student) {
-                $("#tblEstudiantes tbody").append('<tr><td>'
-                    + student.Id + '</td><td>'
-                    + student.Nombre + '</td><td>'
-                    + student.Edad + '</td><td><button class="btn btn-primary" onclick=Edit(´' + student.Id + '´)>Editar</button>'
-                    + '<button class="btn btn-warning" onclick=Delete(´' + student.Id + '´)>Borrar</button></td></tr>');
+                $("#tblEstudiantes tbody").append('<tr><td>' + student.id + '</td><td>'
+                                                        + student.nombre + '</td><td>'
+                                                        + student.edad + '</td><td><button class="btn btn-primary" onclick=Edit(' + student.id + ')>Editar</button>'
+                                                        + '<button class="btn btn-warning" onclick=Delete(' + student.id + ')>Borrar</button></td></tr>');
             });
         });
     }
     function Edit(Id) {
-        var student = _students.find(x => x.Id == Id);
-        $("#txtId").val(student.Id);
-        $("#txtNombre").val(student.Nombre);
-        $("#txtEdad").val(student.Edad);
+        var student = _students.find(x => x.id == Id);
+        $("#txtId").val(student.id);
+        $("#txtNombre").val(student.nombre);
+        $("#txtEdad").val(student.edad);
     }
     function Delete(Id) {
         $.post("Students/Delete?id=" + Id, function () {
