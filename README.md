@@ -21,4 +21,5 @@ https://www.youtube.com/watch?v=yfnPU6w-Naw
 12:35	Crear la vista index
 14:00	Agregar Jquery
 15:40	Probar
-![image](https://user-images.githubusercontent.com/54210589/138896351-7a6cca2e-2265-4ec0-81f1-c305cf36d2b8.png)
+![image](https://user-images.githubusercontent.com/54210589/138896468-8d1c2c9e-6fe2-4d68-aa5c-1831ffe93d9d.png)
+
